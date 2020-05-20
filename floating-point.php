@@ -5,7 +5,7 @@ class FloatingPoint
 {
     public function main()
     {
-//        $this->example1();
+        $this->example1();
 //        $this->example2();
 //        $this->example3();
     }
@@ -20,7 +20,6 @@ class FloatingPoint
         $asking_price = 15.27;
 
         $actual_seller_discount = $asking_price - ($display_price - $shipping_price);
-//        $actual_seller_discount = bcadd($asking_price, -(bcadd($display_price, -$shipping_price, 2)), 2);
         $expected_seller_discount = 0.00;
 
         if ($actual_seller_discount === $expected_seller_discount) {
@@ -30,6 +29,11 @@ class FloatingPoint
             var_dump($actual_seller_discount);
             var_dump($expected_seller_discount);
         }
+
+        /**
+         * SPOILER ALERT
+         * $actual_seller_discount = bcadd($asking_price, -(bcadd($display_price, -$shipping_price, 2)), 2);
+         */
     }
 
     /**
@@ -39,8 +43,6 @@ class FloatingPoint
      */
     private function example2()
     {
-//        ini_set("precision", 18);
-
         $asking_price = 8;
         $discount = 6.4;
 
@@ -54,6 +56,11 @@ class FloatingPoint
             var_dump($actual_display_price);
             var_dump($expected_display_price);
         }
+
+        /**
+         * SPOILER ALERT
+         * ini_set("precision", 18);
+         */
     }
 
     /**
