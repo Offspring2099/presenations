@@ -19,6 +19,7 @@ class FloatingPoint
         $shipping_price = 35.12;
         $asking_price = 15.27;
 
+        //          0           =      15.27    - (      50.39     -      35.12    )
         $actual_seller_discount = $asking_price - ($display_price - $shipping_price);
         $expected_seller_discount = 0.00;
 
@@ -39,7 +40,7 @@ class FloatingPoint
     /**
      * Difference is hidden
      *
-     * See: https://github.com/RecycledMedia/tradesy-common/blob/c7e1f2209e9d1b83b3d666335cea6132d75fc81a/src/Tradesy/Purchase/Checkout.php#L871
+     * See: https://github.com/RecycledMedia/tradesy-common/blob/master/src/Tradesy/Purchase/Checkout.php#L873
      */
     private function example2()
     {
